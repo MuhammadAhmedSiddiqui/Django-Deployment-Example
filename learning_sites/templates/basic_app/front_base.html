@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-xl">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li ><a class="navbar-brand" href="{% url 'user_login' %}">Login</a></li>
+          <li><a class="nav-link" href="{% url 'basic_app:registration' %}">Register</a></li>
+        </ul>
+      </div>
+  </nav>
+  <br><br>
+  <div class="container">
+    <div class="jumbotron">
+      {% block body_block %}
+      {% endblock %}
+    </div>
+  </div>
+  </body>
+</html>
